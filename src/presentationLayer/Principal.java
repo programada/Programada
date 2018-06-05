@@ -87,6 +87,11 @@ public class Principal extends javax.swing.JFrame {
         btToList.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         btToList.setForeground(new java.awt.Color(149, 17, 29));
         btToList.setText("LISTADO EQUIPOS");
+        btToList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btToListActionPerformed(evt);
+            }
+        });
         getContentPane().add(btToList, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 190, 40));
 
         jlImageIcon.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -118,6 +123,12 @@ public class Principal extends javax.swing.JFrame {
        this.setVisible(false);
        
     }//GEN-LAST:event_btInscriptionActionPerformed
+
+    private void btToListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btToListActionPerformed
+     TeamList team = new TeamList(this, true);
+     team.setVisible(true);
+     this.setVisible(false);
+    }//GEN-LAST:event_btToListActionPerformed
 
     public void setTransparentButton(JButton button) {
         button.setOpaque(false);

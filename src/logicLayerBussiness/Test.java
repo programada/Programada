@@ -5,7 +5,6 @@
  */
 package logicLayerBussiness;
 
-import presentationLayer.Login;
 import presentationLayer.Principal;
 /**
  *

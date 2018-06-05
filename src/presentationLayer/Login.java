@@ -7,11 +7,13 @@ package presentationLayer;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+
 /**
  *
  * @author USER-PC
  */
 public class Login extends javax.swing.JDialog {
+
     Principal principal = Principal.getInstance();
 
     /**
@@ -25,6 +27,7 @@ public class Login extends javax.swing.JDialog {
         ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
         jlImage.setIcon(icon2);
         lbBack.setIcon(icon1);
+        this.setSize(400,370);
         setLocationRelativeTo(null);
         principal.dispose();
     }
@@ -48,6 +51,7 @@ public class Login extends javax.swing.JDialog {
         lbBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(400, 370));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlImage.setPreferredSize(new java.awt.Dimension(260, 90));
@@ -89,12 +93,11 @@ public class Login extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNameActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_jtNameActionPerformed
 
-    
-        public void setTransparentButton(JButton button) {
+    public void setTransparentButton(JButton button) {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);
