@@ -40,7 +40,7 @@ public class BuilderTeam implements BuilderInterface {
 
     @Override
     public void validatePlayer(Player player) {
-        
+        System.out.println("hola mundo");
     }
 
     @Override
