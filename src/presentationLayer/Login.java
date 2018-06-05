@@ -28,6 +28,7 @@ public class Login extends javax.swing.JDialog {
         jlImage.setIcon(icon2);
         lbBack.setIcon(icon1);
         this.setSize(400,370);
+        System.out.println("sdfsdf");
         setLocationRelativeTo(null);
         principal.dispose();
     }
