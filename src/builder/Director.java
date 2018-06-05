@@ -13,10 +13,10 @@ public class Director {
 
     }
 
-    public Project createProject(BuilderProject project, String name, Employee inCharge, int timeWeek, ArrayList<Date> dates) throws InvalidValidation {
+    public Project createProject(BuilderTeam project, String name, Employee inCharge, int timeWeek, ArrayList<Date> dates) throws InvalidValidation {
         //Builder por parametro cuando es por interfaz para recibir
         if (project == null) {
-            project = new BuilderProject();
+            project = new BuilderTeam();
             project.builderProject();
         }
         project.createName(name);

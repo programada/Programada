@@ -1,24 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package presentationLayer;
 
-import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class PrincipalWindow extends javax.swing.JFrame {
+/**
+ *
+ * @author LAUREN VEGA
+ */
+public class Principal extends javax.swing.JFrame {
+    
+    private static Principal principal = new Principal();
+    
+    public static Principal getInstance() {
+        return principal;
+    }
 
     /**
-     * Creates new form PrincipalPage
+     * Creates new form Principal
      */
-    public PrincipalWindow() {
+    public Principal() {
         initComponents();
         setTransparentButton(btPlay);
         setTransparentButton(btInscription);
         setTransparentButton(btModify);
         setTransparentButton(btToList);
-        this.setSize(465, 553);
-        ImageIcon icon1 = new ImageIcon("imagenes progra/maxresdefault.jpg");
-        ImageIcon icon2 = new ImageIcon("Images/background.jpg");
-        jlBackground.setIcon(icon2);
+        this.setSize(450, 480);
+        ImageIcon icon1 = new ImageIcon("imagenes progra/white.jpg");
+        ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
+        lbBackground.setIcon(icon1);
+        jlImageIcon.setIcon(icon2);
     }
 
     /**
@@ -35,9 +50,11 @@ public class PrincipalWindow extends javax.swing.JFrame {
         btModify = new javax.swing.JButton();
         btToList = new javax.swing.JButton();
         jlImageIcon = new javax.swing.JLabel();
-        jlBackground = new javax.swing.JLabel();
+        lbBackground = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(410, 440));
+        setPreferredSize(new java.awt.Dimension(410, 440));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btPlay.setBackground(new java.awt.Color(255, 255, 255));
@@ -50,7 +67,7 @@ public class PrincipalWindow extends javax.swing.JFrame {
                 btPlayActionPerformed(evt);
             }
         });
-        getContentPane().add(btPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 160, 40));
+        getContentPane().add(btPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 190, 40));
 
         btInscription.setFont(new java.awt.Font("SimSun-ExtB", 1, 16)); // NOI18N
         btInscription.setForeground(new java.awt.Color(149, 17, 29));
@@ -60,47 +77,46 @@ public class PrincipalWindow extends javax.swing.JFrame {
                 btInscriptionActionPerformed(evt);
             }
         });
-        getContentPane().add(btInscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 160, 40));
+        getContentPane().add(btInscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 190, 40));
 
         btModify.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         btModify.setForeground(new java.awt.Color(149, 17, 29));
         btModify.setText("MODIFICAR EQUIPO");
-        getContentPane().add(btModify, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 160, 40));
+        getContentPane().add(btModify, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 190, 40));
 
         btToList.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         btToList.setForeground(new java.awt.Color(149, 17, 29));
         btToList.setText("LISTADO EQUIPOS");
-        getContentPane().add(btToList, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 160, 40));
+        getContentPane().add(btToList, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 190, 40));
 
         jlImageIcon.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jlImageIcon.setForeground(new java.awt.Color(255, 255, 255));
         jlImageIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlImageIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Documents\\NetBeansProjects\\ProgramProjectI\\imagenes progra\\Escape-Room-Google-979x551.png")); // NOI18N
-        getContentPane().add(jlImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 260, 90));
+        getContentPane().add(jlImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 260, 90));
 
-        jlBackground.setForeground(new java.awt.Color(255, 255, 255));
-        jlBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Documents\\NetBeansProjects\\ProgramProjectI\\imagenes progra\\white-background-1920x1080-4.jpg")); // NOI18N
-        jlBackground.setMaximumSize(new java.awt.Dimension(1200, 600));
-        jlBackground.setMinimumSize(new java.awt.Dimension(1200, 600));
-        jlBackground.setPreferredSize(new java.awt.Dimension(480, 430));
-        getContentPane().add(jlBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, -1));
+        lbBackground.setMinimumSize(new java.awt.Dimension(465, 530));
+        lbBackground.setPreferredSize(new java.awt.Dimension(410, 440));
+        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPlayActionPerformed
 
-        Main.user.setLocationRelativeTo(null);
-        Main.user.getButtonEnter().setVisible(true);
-        Main.user.getButtonSave().setVisible(false);
-        Main.user.getTfNickName().setVisible(false);
-        Main.user.getLbNickName().setVisible(false);
-        Main.user.getLbEmail().setText("Usuario");
-        Main.user.setVisible(true);
+        //        Main.user.setLocationRelativeTo(null);
+        //        Main.user.getButtonEnter().setVisible(true);
+        //        Main.user.getButtonSave().setVisible(false);
+        //        Main.user.getTfNickName().setVisible(false);
+        //        Main.user.getLbNickName().setVisible(false);
+        //        Main.user.getLbEmail().setText("Usuario");
+        //        Main.user.setVisible(true);
     }//GEN-LAST:event_btPlayActionPerformed
 
     private void btInscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btInscriptionActionPerformed
-        // TODO add your handling code here:
+       Login login = new Login(this, true);
+       login.setVisible(true);
+       this.setVisible(false);
+       
     }//GEN-LAST:event_btInscriptionActionPerformed
 
     public void setTransparentButton(JButton button) {
@@ -109,36 +125,12 @@ public class PrincipalWindow extends javax.swing.JFrame {
         button.setBorderPainted(false);
     }
 
-//    public void closeWindow(java.awt.event.WindowEvent evt) {
-//        if (DISPOSE_ON_CLOSE == 2) {
-//           
-//        }
-//    }
-//
-//    @Override
-//    public void disable() {
-//        super.disable(); //To change body of generated methods, choose Tools | Templates.
-//    }
-
-    @Override
-    public void dispose() {
-         try {
-                Main.userInterfaceManager.writeInfo();
-                System.out.println("ESCRIBE");
-            } catch (IOException ex) {
-                System.out.println("no escribio");
-            }
-        System.exit(0); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btInscription;
     private javax.swing.JButton btModify;
     private javax.swing.JButton btPlay;
     private javax.swing.JButton btToList;
-    private javax.swing.JLabel jlBackground;
     private javax.swing.JLabel jlImageIcon;
+    private javax.swing.JLabel lbBackground;
     // End of variables declaration//GEN-END:variables
 }

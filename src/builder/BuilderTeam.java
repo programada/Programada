@@ -31,8 +31,7 @@ public class BuilderTeam implements BuilderInterface {
     public void createName(String name) {
         patron = Pattern.compile(name);
         match = patron.matcher(LETTERS);
-        results = match.find();
-        while (results) {//Preguntar sí se puede usar JOption
+        while (match.find()) {//Preguntar sí se puede usar JOption
             //retornar mensaje de verificacion
         } 
 
