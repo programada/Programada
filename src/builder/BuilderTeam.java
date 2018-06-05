@@ -14,7 +14,7 @@ public class BuilderTeam implements BuilderInterface {
 
     private String informationRequired;
     private int counter;
-    private final String LETTERS = "[^a-zA-Z]";//Encuentra un elemento que no este entre A-Z ni a-z
+    private final String LETTERS = "[a-zA-Z]{2,10}";//Encuentra un elemento que no este entre A-Z ni a-z
     private Pattern patron;
     private Matcher match;
     private boolean results;
@@ -29,11 +29,11 @@ public class BuilderTeam implements BuilderInterface {
 
     @Override
     public void createName(String name) {
-        patron = Pattern.compile(name);
-        match = patron.matcher(LETTERS);
-        while (match.find()) {//Preguntar sí se puede usar JOption
+        patron = Pattern.compile(LETTERS);
+        match = patron.matcher(name);
+        results = match.matches(); //Preguntar sí se puede usar JOption
             //retornar mensaje de verificacion
-        } 
+         
 
         
     }

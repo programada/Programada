@@ -13,7 +13,7 @@ public class Test {
 
     public static void main(String[] args) throws ParseException {//El patron es la clase que haga uso del patron
         BuilderTeam b = new BuilderTeam();
-        b.createName("Hola17");
+        b.createName("Ho");
 //        try {
 //            Director d = new Director();
 //
