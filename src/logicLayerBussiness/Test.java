@@ -16,5 +16,7 @@ public class Test {
         Principal frame = Principal.getInstance();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+        Timer t = new Timer();
+        t.start();
     }
 }
