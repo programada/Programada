@@ -5,6 +5,7 @@
  */
 package logicLayerBussiness;
 
+import presentationLayer.FirstDesign;
 import presentationLayer.Principal;
 /**
  *
@@ -14,9 +15,13 @@ public class Test {
 
     public static void main(String[] args) {
         Principal frame = Principal.getInstance();
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        Timer t = new Timer();
-        t.start();
+//        frame.setVisible(true);
+//        frame.setLocationRelativeTo(null);
+//        Timer t = new Timer();
+//        t.start();
+          FirstDesign f = new FirstDesign(frame, false);
+          f.setVisible(true);
+          f.setLocationRelativeTo(null);
+          
     }
 }
