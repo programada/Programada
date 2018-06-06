@@ -83,6 +83,7 @@ public class BuilderTeam implements BuilderInterface {
         if (!"".equals(informationRequired)) {
             JOptionPane.showMessageDialog(null, "Verifique la información ingresada", "ERROR AL INSCRIBIR EQUIPO", INFORMATION_MESSAGE);
         }
+        System.out.println("FIX");//QUITAR
         return team;
     }
 
