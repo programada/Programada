@@ -3,9 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1109, 661]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -48,7 +45,7 @@
     <Component class="javax.swing.JLabel" name="lbFirstLock">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USER-PC\Desktop\ProgramProjectI\imagenes progra\candadoCerrado.jpg"/>
+          <Image iconType="2" name="C:\Users\AxMCa\Desktop\Programada\imagenes progra\candadoCerrado.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -58,11 +55,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSecondLock">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USER-PC\Desktop\ProgramProjectI\imagenes progra\candadoCerrado.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="1000" y="180" width="90" height="90"/>
@@ -70,11 +62,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbThirdLock">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USER-PC\Desktop\ProgramProjectI\imagenes progra\candadoCerrado.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="1000" y="300" width="90" height="90"/>
@@ -82,11 +69,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbFourLock">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USER-PC\Desktop\ProgramProjectI\imagenes progra\candadoCerrado.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="1000" y="410" width="90" height="90"/>
@@ -110,7 +92,7 @@
     <Component class="javax.swing.JLabel" name="lbBackground">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USER-PC\Desktop\ProgramProjectI\imagenes progra\FirstDesign.png"/>
+          <Image iconType="2" name="C:\Users\AxMCa\Desktop\Programada\imagenes progra\FirstDesign.png"/>
         </Property>
       </Properties>
       <Constraints>
