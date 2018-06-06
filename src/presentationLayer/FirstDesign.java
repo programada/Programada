@@ -48,7 +48,6 @@ public class FirstDesign extends javax.swing.JDialog {
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1109, 661));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbClock.setFont(new java.awt.Font("Sylfaen", 0, 14)); // NOI18N
@@ -57,19 +56,13 @@ public class FirstDesign extends javax.swing.JDialog {
         lbClock.setText("00:00");
         getContentPane().add(lbClock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 100, 40));
 
-        lbFirstLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Desktop\\ProgramProjectI\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
+        lbFirstLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\AxMCa\\Desktop\\Programada\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
         getContentPane().add(lbFirstLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 60, 90, 90));
-
-        lbSecondLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Desktop\\ProgramProjectI\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
         getContentPane().add(lbSecondLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, 90, 90));
-
-        lbThirdLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Desktop\\ProgramProjectI\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
         getContentPane().add(lbThirdLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, 90, 90));
-
-        lbFourLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Desktop\\ProgramProjectI\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
         getContentPane().add(lbFourLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 410, 90, 90));
 
-        lbBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\USER-PC\\Desktop\\ProgramProjectI\\imagenes progra\\FirstDesign.png")); // NOI18N
+        lbBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\AxMCa\\Desktop\\Programada\\imagenes progra\\FirstDesign.png")); // NOI18N
         getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -5, 1110, 670));
 
         pack();
