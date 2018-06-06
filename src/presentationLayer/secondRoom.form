@@ -54,9 +54,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="principalLock1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\AxMCa\Desktop\Programada\imagenes progra\candadoCerrado.jpg"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="principal"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="principalLock1MouseClicked"/>

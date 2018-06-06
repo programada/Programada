@@ -40,7 +40,7 @@ public class secondRoom extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        principalLock1.setIcon(new javax.swing.ImageIcon("C:\\Users\\AxMCa\\Desktop\\Programada\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
+        principalLock1.setText("principal");
         principalLock1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 principalLock1MouseClicked(evt);
