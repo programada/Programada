@@ -7,6 +7,7 @@ package presentationLayer;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import logicLayerBussiness.Timer;
 
 /**
@@ -22,6 +23,10 @@ public class FirstDesign extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.setSize(1109, 661);
+        ImageIcon icon1 = new ImageIcon("imagenes progra/FirstDesign.png");
+        //ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
+        lbBackground.setIcon(icon1);
+        //jlImageIcon.setIcon(icon2);
         Thread1 t = new Thread1();
         t.start();
     }
