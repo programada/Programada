@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package logicLayerBussiness;
-
 import presentationLayer.Principal;
 /**
  *
@@ -16,5 +15,6 @@ public class Test {
         Principal frame = Principal.getInstance();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+            
     }
 }

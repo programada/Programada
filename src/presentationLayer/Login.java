@@ -5,8 +5,11 @@
  */
 package presentationLayer;
 
+import builder.Director;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import logicLayerBussiness.Player;
 
 /**
  *
@@ -15,7 +18,8 @@ import javax.swing.JButton;
 public class Login extends javax.swing.JDialog {
 
     Principal principal = Principal.getInstance();
-
+    private ArrayList<Player> list;
+    private Director director = Director.getInstance();
     /**
      * Creates new form Login
      */
@@ -23,16 +27,16 @@ public class Login extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setTransparentButton(btAddPlayers);
+        setTransparentButton(btOk);
         ImageIcon icon1 = new ImageIcon("imagenes progra/white.jpg");
         ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
         jlImage.setIcon(icon2);
         lbBack.setIcon(icon1);
-        this.setSize(400,370);
-        System.out.println("sdfsdf");
+        this.setSize(432,400);
         setLocationRelativeTo(null);
         principal.dispose();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,10 +53,12 @@ public class Login extends javax.swing.JDialog {
         jlPlayer = new javax.swing.JLabel();
         jlWarningDate = new javax.swing.JLabel();
         btAddPlayers = new javax.swing.JButton();
+        btOk = new javax.swing.JButton();
         lbBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 370));
+        setMinimumSize(new java.awt.Dimension(432, 400));
+        setPreferredSize(new java.awt.Dimension(432, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlImage.setPreferredSize(new java.awt.Dimension(260, 90));
@@ -61,11 +67,11 @@ public class Login extends javax.swing.JDialog {
         jlInscription.setFont(new java.awt.Font("SimSun-ExtB", 1, 18)); // NOI18N
         jlInscription.setForeground(new java.awt.Color(149, 17, 29));
         jlInscription.setText("INSCRIPCION");
-        getContentPane().add(jlInscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 139, 119, 23));
+        getContentPane().add(jlInscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 119, 23));
 
         jlName.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         jlName.setText("NOMBRE DE EQUIPO:");
-        getContentPane().add(jlName, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 201, -1, -1));
+        getContentPane().add(jlName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jtName.setFont(new java.awt.Font("SimSun-ExtB", 0, 14)); // NOI18N
         jtName.addActionListener(new java.awt.event.ActionListener() {
@@ -73,32 +79,56 @@ public class Login extends javax.swing.JDialog {
                 jtNameActionPerformed(evt);
             }
         });
-        getContentPane().add(jtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 198, 226, -1));
+        getContentPane().add(jtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 130, -1));
 
         jlPlayer.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         jlPlayer.setText("JUGADORES:");
-        getContentPane().add(jlPlayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 261, 126, -1));
+        getContentPane().add(jlPlayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 126, -1));
 
         jlWarningDate.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         jlWarningDate.setForeground(new java.awt.Color(149, 29, 17));
         jlWarningDate.setText("LA FECHA CORRESPONDE A LA ACTUAL");
-        getContentPane().add(jlWarningDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 319, 268, -1));
+        getContentPane().add(jlWarningDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 268, -1));
 
         btAddPlayers.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
         btAddPlayers.setForeground(new java.awt.Color(102, 102, 102));
         btAddPlayers.setText("AGREGAR");
-        getContentPane().add(btAddPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 250, 132, 30));
-        getContentPane().add(lbBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 400, 370));
+        btAddPlayers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAddPlayersActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btAddPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 132, 30));
+
+        btOk.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
+        btOk.setForeground(new java.awt.Color(102, 102, 102));
+        btOk.setText("GUARDAR");
+        btOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOkActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btOk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 120, -1));
+        getContentPane().add(lbBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 432, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNameActionPerformed
-
-
+        director.getBuilder().setTeamName(jtName.getText());
     }//GEN-LAST:event_jtNameActionPerformed
 
-    public void setTransparentButton(JButton button) {
+    private void btAddPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAddPlayersActionPerformed
+        PlayerInscription inscription = new PlayerInscription(principal, true);
+        inscription.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btAddPlayersActionPerformed
+
+    private void btOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOkActionPerformed
+       director.createTeam();
+    }//GEN-LAST:event_btOkActionPerformed
+        
+    private void setTransparentButton(JButton button) {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);
@@ -107,6 +137,7 @@ public class Login extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAddPlayers;
+    private javax.swing.JButton btOk;
     private javax.swing.JLabel jlImage;
     private javax.swing.JLabel jlInscription;
     private javax.swing.JLabel jlName;

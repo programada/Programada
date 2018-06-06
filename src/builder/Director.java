@@ -1,7 +1,6 @@
 package builder;
 
-import java.util.ArrayList;
-import java.util.Date;
+import logicLayerBussiness.Team;
 
 /**
  *
@@ -9,21 +8,24 @@ import java.util.Date;
  */
 public class Director {
 
-    public Director() {
+    private static final Director director = new Director();
+    private static final BuilderTeam team = new BuilderTeam();
+    
 
+    public static Director getInstance() {
+        return director;
     }
 
-    public Project createProject(BuilderTeam project, String name, Employee inCharge, int timeWeek, ArrayList<Date> dates) throws InvalidValidation {
-        //Builder por parametro cuando es por interfaz para recibir
-        if (project == null) {
-            project = new BuilderTeam();
-            project.builderProject();
-        }
-        project.createName(name);
-        project.validateInCharge(inCharge);
-        project.validateTime(timeWeek);
-        project.validateArray(dates);
+    public BuilderTeam getBuilder() {
+        return team;
+    }
 
-        return project.getProject();
+    public Team createTeam() {
+        //Builder por parametro cuando es por interfaz para recibir
+        team.builderTeam();
+        team.createName();
+        //team.validatePlayerList();
+
+        return team.getTeam();
     }
 }

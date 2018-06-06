@@ -130,7 +130,7 @@ public class Principal extends javax.swing.JFrame {
      this.setVisible(false);
     }//GEN-LAST:event_btToListActionPerformed
 
-    public void setTransparentButton(JButton button) {
+    private void setTransparentButton(JButton button) {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);

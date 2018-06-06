@@ -9,11 +9,11 @@ import logicLayerBussiness.Team;
  */
 public interface BuilderInterface {
 
-    public void builderProject();
+    public void builderTeam();
 
-    public void createName(String name);
+    public void createName();
 
-    public void validatePlayer(Player player);
+    public void validatePlayerList(Player PlayerR);
 
     public Team getTeam();
 

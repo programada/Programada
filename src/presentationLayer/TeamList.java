@@ -119,7 +119,7 @@ public class TeamList extends javax.swing.JDialog {
         this.setVisible(false);
     }//GEN-LAST:event_btListNameActionPerformed
 
-    public void setTransparentButton(JButton button) {
+    private void setTransparentButton(JButton button) {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);

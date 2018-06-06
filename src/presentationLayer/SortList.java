@@ -44,7 +44,6 @@ public class SortList extends javax.swing.JDialog {
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(410, 470));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbTitle.setFont(new java.awt.Font("SimSun-ExtB", 1, 18)); // NOI18N
