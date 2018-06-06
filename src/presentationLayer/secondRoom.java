@@ -5,6 +5,8 @@
  */
 package presentationLayer;
 
+import logicLayerBussiness.Lock;
+
 /**
  *
  * @author AxMCa
