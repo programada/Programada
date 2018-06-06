@@ -5,13 +5,6 @@
  */
 package logicLayerBussiness;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,11 +14,19 @@ import java.util.logging.Logger;
  */
 public class Timer extends Thread {
 
-    String timeE;
-    String minutesS;
-    String secondsS;
-    int minutes;
-    int seconds;
+    private String timeE;
+    private String minutesS;
+    private String secondsS;
+    private int minutes;
+    private int seconds;
+    
+    public String getTime() {
+        return timeE;
+    }
+    
+    public void setTime(String timeE) {
+        this.timeE = timeE;
+    }
 
     @Override
     public void run() {
@@ -45,7 +46,7 @@ public class Timer extends Thread {
                        secondsS = String.valueOf(seconds); 
                     }
                     timeE = minutesS + ":" + secondsS;
-                    System.out.println(timeE);
+                    setTime(timeE);
                     sleep(1000);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Timer.class.getName()).log(Level.SEVERE, null, ex);

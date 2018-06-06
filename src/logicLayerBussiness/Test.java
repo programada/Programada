@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package logicLayerBussiness;
+
+import presentationLayer.FirstDesign;
 import presentationLayer.Principal;
 /**
  *
@@ -16,5 +18,13 @@ public class Test {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
             
+//        frame.setVisible(true);
+//        frame.setLocationRelativeTo(null);
+//        Timer t = new Timer();
+//        t.start();
+          FirstDesign f = new FirstDesign(frame, false);
+          f.setVisible(true);
+          f.setLocationRelativeTo(null);
+          
     }
 }
