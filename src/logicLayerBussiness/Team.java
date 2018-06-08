@@ -18,12 +18,30 @@ import java.util.Objects;
  */
 public class Team implements Serializable{
 
-    private HashSet<Player> playerList;//Lista de jugadores
+    private HashSet<Player> playerList;
     private String teamName;
     private Date date;
+    private int individualRanking;
+    private int rankingByTeam;
 
     public Team() {
         date = new Date();
+    }
+
+    public int getIndividualRanking() {
+        return individualRanking;
+    }
+
+    public void setIndividualRanking(int individualRanking) {
+        this.individualRanking = individualRanking;
+    }
+
+    public int getRankingByTeam() {
+        return rankingByTeam;
+    }
+
+    public void setRankingByTeam(int rankingByTeam) {
+        this.rankingByTeam = rankingByTeam;
     }
 
     public void setPlayerList(ArrayList<Player> playerList1) {

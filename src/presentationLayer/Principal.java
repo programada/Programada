@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import logicLayerBussiness.Proof;
 import logicLayerBussiness.Test;
 
 /**
@@ -119,7 +120,9 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPlayActionPerformed
-
+         new Proof().create();new Proof().create();
+         
+         
         //        Main.user.setLocationRelativeTo(null);
         //        Main.user.getButtonEnter().setVisible(true);
         //        Main.user.getButtonSave().setVisible(false);

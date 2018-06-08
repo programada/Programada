@@ -17,7 +17,9 @@ import logicLayerBussiness.Timer;
  * @author USER-PC
  */
 public class FirstDesign extends javax.swing.JDialog {
+
     private ArrayList<JLabel> firstLock = new ArrayList();
+
     /**
      * Creates new form FirstDesign
      */
@@ -27,9 +29,6 @@ public class FirstDesign extends javax.swing.JDialog {
         this.setSize(1109, 661);
         ImageIcon icon1 = new ImageIcon("imagenes progra/FirstDesign.png");
         //ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
-        lbClueMouseClikedEvent(lbFirstLock, "FIRST LOCK");
-        lbClueMouseClikedEvent(lbClue1, "PIEZA REDONDA DE PAISES");
-        lbClueMouseClikedEvent(lbFirstQ, null);
         lbBackground.setIcon(icon1);
         firstLock.add(lbClue1);
         Thread1 t = new Thread1();
@@ -55,7 +54,6 @@ public class FirstDesign extends javax.swing.JDialog {
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1109, 661));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -64,38 +62,35 @@ public class FirstDesign extends javax.swing.JDialog {
         lbClock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbClock.setText("00:00");
         getContentPane().add(lbClock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 100, 40));
-
-        lbFirstLock.setIcon(new javax.swing.ImageIcon("C:\\Users\\AxMCa\\Desktop\\Programada\\imagenes progra\\candadoCerrado.jpg")); // NOI18N
         getContentPane().add(lbFirstLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 60, 90, 90));
         getContentPane().add(lbSecondLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, 90, 90));
         getContentPane().add(lbThirdLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, 90, 90));
         getContentPane().add(lbFourLock, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 410, 90, 90));
         getContentPane().add(lbClue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 10, 20));
         getContentPane().add(lbFirstQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 10, 10));
-
-        lbBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\LAUREN VEGA\\Documents\\NetBeansProjects\\ProgramadaI\\imagenes progra\\FirstDesign.png")); // NOI18N
         getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -5, 1110, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void lbMouseClicked(java.awt.event.MouseEvent evt, String msj) {//Eventos
-        if(msj != null) {
+        if (msj != null) {
             JOptionPane.showMessageDialog(null, msj);
         } else {
             InputWindow input = new InputWindow(Test.principal, true);
             input.showMessage("¿Cual es la capital de USA?");
         }
     }
+
     private void lbClueMouseClikedEvent(JLabel label, String msj) {
         label.addMouseListener(new java.awt.event.MouseAdapter() {
-           @Override
-           public void mouseClicked(java.awt.event.MouseEvent evt) {
-               lbMouseClicked(evt, msj);
-           }
-});
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbMouseClicked(evt, msj);
+            }
+        });
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lbBackground;
@@ -115,6 +110,10 @@ public class FirstDesign extends javax.swing.JDialog {
         @Override
         public void run() {
             t.start();
+                            lbClueMouseClikedEvent(lbFirstLock, "FIRST LOCK");
+                lbClueMouseClikedEvent(lbClue1, "PIEZA REDONDA DE PAISES");
+                lbClueMouseClikedEvent(lbFirstQ, null);
+
             while (true) {
                 lbClock.setText(t.getTime());
             }

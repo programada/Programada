@@ -11,6 +11,7 @@ import presentationLayer.Principal;
 import java.io.IOException;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
+import presentationLayer.FirstDesign;
 import presentationLayer.Login;
 import presentationLayer.PlayerInscription;
 import presentationLayer.SortList;
@@ -24,12 +25,14 @@ public class Test {
     public static Login login = new Login(principal, true);
     public static PlayerInscription inscription = new PlayerInscription(principal, true);
     public static SortList sList = new SortList(principal, true);
+    public static FirstDesign first = new FirstDesign(principal, true);
     
     
     public static TeamList teamList = new TeamList();
     public static Director director = new Director();
     public static TeamListFile teamListFile = new TeamListFile();
     public static HashSet teamList2 = new HashSet<Team>();
+    public static Proof p = new Proof();
     
     public static ReadFirstClue read = new ReadFirstClue();
        
