@@ -15,7 +15,6 @@ public class ScreenDeparture implements Observer {
 
     @Override
     public void addNotifyFlight(Flights newFlight) {
-
         if (newFlight.isDeparture()) {
             textFlights += newFlight.toString();
         }
