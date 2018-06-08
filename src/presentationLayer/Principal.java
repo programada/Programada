@@ -5,20 +5,19 @@
  */
 package presentationLayer;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import logicLayerBussiness.Test;
 
 /**
  *
  * @author LAUREN VEGA
  */
 public class Principal extends javax.swing.JFrame {
-    
-    private static Principal principal = new Principal();
-    
-    public static Principal getInstance() {
-        return principal;
-    }
+
 
     /**
      * Creates new form Principal
@@ -29,6 +28,7 @@ public class Principal extends javax.swing.JFrame {
         setTransparentButton(btInscription);
         setTransparentButton(btModify);
         setTransparentButton(btToList);
+        setTransparentButton(btExit);
         this.setSize(450, 480);
         ImageIcon icon1 = new ImageIcon("imagenes progra/white.jpg");
         ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
@@ -49,11 +49,13 @@ public class Principal extends javax.swing.JFrame {
         btInscription = new javax.swing.JButton();
         btModify = new javax.swing.JButton();
         btToList = new javax.swing.JButton();
+        btExit = new javax.swing.JButton();
         jlImageIcon = new javax.swing.JLabel();
         lbBackground = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(410, 440));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(410, 440));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -94,6 +96,16 @@ public class Principal extends javax.swing.JFrame {
         });
         getContentPane().add(btToList, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 190, 40));
 
+        btExit.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
+        btExit.setForeground(new java.awt.Color(149, 17, 29));
+        btExit.setText("SALIR");
+        btExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 190, 40));
+
         jlImageIcon.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jlImageIcon.setForeground(new java.awt.Color(255, 255, 255));
         jlImageIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -118,17 +130,27 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btPlayActionPerformed
 
     private void btInscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btInscriptionActionPerformed
-       Login login = new Login(this, true);
-       login.setVisible(true);
-       this.setVisible(false);
-       
+        Test.login.setVisible(true);
+        Test.login.setLocationRelativeTo(null);
+        
     }//GEN-LAST:event_btInscriptionActionPerformed
 
     private void btToListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btToListActionPerformed
-     TeamList team = new TeamList(this, true);
-     team.setVisible(true);
-     this.setVisible(false);
+        SortTeamList team = new SortTeamList(this, true);
+        team.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btToListActionPerformed
+
+    private void btExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExitActionPerformed
+        try {
+            Test.teamListFile.writeTeamListFile("studentFile.ser");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.exit(0);
+    }//GEN-LAST:event_btExitActionPerformed
 
     private void setTransparentButton(JButton button) {
         button.setOpaque(false);
@@ -137,6 +159,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btExit;
     private javax.swing.JButton btInscription;
     private javax.swing.JButton btModify;
     private javax.swing.JButton btPlay;

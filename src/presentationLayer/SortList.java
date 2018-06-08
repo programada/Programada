@@ -12,11 +12,7 @@ import javax.swing.ImageIcon;
  * @author USER-PC
  */
 public class SortList extends javax.swing.JDialog {
-    private static SortList list = new SortList(Principal.getInstance(), true);
     
-    public static SortList getInstance() {
-        return list;
-    }
     /**
      * Creates new form SortList
      */
@@ -41,6 +37,7 @@ public class SortList extends javax.swing.JDialog {
         lbTitle = new javax.swing.JLabel();
         jlSortList = new javax.swing.JScrollPane();
         sortList = new javax.swing.JList<>();
+        btBack = new javax.swing.JButton();
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -53,14 +50,29 @@ public class SortList extends javax.swing.JDialog {
 
         jlSortList.setViewportView(sortList);
 
-        getContentPane().add(jlSortList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 359, 343));
+        getContentPane().add(jlSortList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 359, 343));
+
+        btBack.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
+        btBack.setForeground(new java.awt.Color(102, 102, 102));
+        btBack.setText("REGRESAR");
+        btBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 120, 30));
         getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBackActionPerformed
+        dispose();
+    }//GEN-LAST:event_btBackActionPerformed
+
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btBack;
     private javax.swing.JScrollPane jlSortList;
     private javax.swing.JLabel lbBackground;
     private javax.swing.JLabel lbTitle;

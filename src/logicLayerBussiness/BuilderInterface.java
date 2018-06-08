@@ -1,7 +1,5 @@
-package builder;
+package logicLayerBussiness;
 
-import logicLayerBussiness.Player;
-import logicLayerBussiness.Team;
 
 /**
  *

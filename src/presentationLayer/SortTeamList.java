@@ -7,16 +7,15 @@ package presentationLayer;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import logicLayerBussiness.Test;
 
 /**
  *
  * @author USER-PC
  */
-public class TeamList extends javax.swing.JDialog {
+public class SortTeamList extends javax.swing.JDialog {
     
-     Principal principal = Principal.getInstance();
-     
-    public TeamList(java.awt.Frame parent, boolean modal) {
+    public SortTeamList(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         ImageIcon icon1 = new ImageIcon("imagenes progra/white.jpg");
@@ -28,7 +27,7 @@ public class TeamList extends javax.swing.JDialog {
         setTransparentButton(btRanking);
         this.setSize(400,460);
         setLocationRelativeTo(null);
-        principal.dispose();
+        Test.principal.dispose();
     }
 
     /**
@@ -49,6 +48,7 @@ public class TeamList extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 376));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(400, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -102,20 +102,17 @@ public class TeamList extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btDateListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDateListActionPerformed
-        SortList list = SortList.getInstance();
-        list.setVisible(true);
+        Test.sList.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btDateListActionPerformed
 
     private void btRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRankingActionPerformed
-        SortList list = SortList.getInstance();
-        list.setVisible(true);
+        Test.sList.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btRankingActionPerformed
 
     private void btListNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListNameActionPerformed
-        SortList list = SortList.getInstance();
-        list.setVisible(true);
+        Test.sList.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btListNameActionPerformed
 

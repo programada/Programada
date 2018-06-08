@@ -5,6 +5,8 @@
  */
 package logicLayerBussiness;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -14,19 +16,18 @@ import java.util.Objects;
  *
  * @author USER-PC
  */
-public class Team {
+public class Team implements Serializable{
 
-    private HashSet<Player> teamList;//Lista de jugadores
+    private HashSet<Player> playerList;//Lista de jugadores
     private String teamName;
     private Date date;
 
     public Team() {
-        this.teamList = new HashSet();
         date = new Date();
     }
 
-    public HashSet<Player> getTeamList() {
-        return teamList;
+    public void setPlayerList(ArrayList<Player> playerList1) {
+          playerList = new HashSet(playerList1);
     }
 
     public String getTeamName() {
@@ -46,27 +47,51 @@ public class Team {
     }
     
     public void addToList(Player player) {
-        teamList.add(player);
+        playerList.add(player);
     }  
 
     public void removePlayer(Player player) {
-        teamList.remove(player);
+        playerList.remove(player);
     }
     
     public String printPlayerList() {
         String text = "";
-        for (Iterator<Player> iterator = teamList.iterator(); iterator.hasNext();) {
+        for (Iterator<Player> iterator = playerList.iterator(); iterator.hasNext();) {
             Player next = iterator.next();
-            text += next.getId() + " ";
+            if (next != null) {
+            text += next + " ";
+            }
         }
         return text;
     }
 
     @Override
     public String toString() {
-        return "Equipo: \n" + " Lista de jugadores: " + printPlayerList() + " \n Nombre del Equipo: " + teamName +
+        return "Equipo: \n" + " Lista de jugadores: " + playerList.toString() + " \n Nombre del Equipo: " + teamName +
                 " \nFecha de Inscripción: " + date;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.teamName);
+        return hash;
+    }
+
+    /****************no pueden haber equipos con los mismos nombres******************/
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Team other = (Team) obj;
+        return Objects.equals(this.teamName, other.teamName);
+    }
     
 }

@@ -5,21 +5,24 @@
  */
 package presentationLayer;
 
-import builder.Director;
-import java.util.ArrayList;
+import logicLayerBussiness.Director;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import logicLayerBussiness.Player;
+import javax.swing.JOptionPane;
+import logicLayerBussiness.Team;
+import logicLayerBussiness.Test;
 
 /**
  *
  * @author USER-PC
  */
 public class Login extends javax.swing.JDialog {
+    private Director director = new Director();
+    
+    public Director getDirector() {
+        return director;
+    }
 
-    Principal principal = Principal.getInstance();
-    private ArrayList<Player> list;
-    private Director director = Director.getInstance();
     /**
      * Creates new form Login
      */
@@ -27,16 +30,16 @@ public class Login extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setTransparentButton(btAddPlayers);
+        setTransparentButton(btBack);
         setTransparentButton(btOk);
         ImageIcon icon1 = new ImageIcon("imagenes progra/white.jpg");
         ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
         jlImage.setIcon(icon2);
         lbBack.setIcon(icon1);
-        this.setSize(432,400);
+        this.setSize(432, 430);
         setLocationRelativeTo(null);
-        principal.dispose();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,11 +57,13 @@ public class Login extends javax.swing.JDialog {
         jlWarningDate = new javax.swing.JLabel();
         btAddPlayers = new javax.swing.JButton();
         btOk = new javax.swing.JButton();
+        btBack = new javax.swing.JButton();
         lbBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(432, 400));
-        setPreferredSize(new java.awt.Dimension(432, 400));
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlImage.setPreferredSize(new java.awt.Dimension(260, 90));
@@ -74,11 +79,6 @@ public class Login extends javax.swing.JDialog {
         getContentPane().add(jlName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jtName.setFont(new java.awt.Font("SimSun-ExtB", 0, 14)); // NOI18N
-        jtName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtNameActionPerformed(evt);
-            }
-        });
         getContentPane().add(jtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 130, -1));
 
         jlPlayer.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
@@ -109,25 +109,41 @@ public class Login extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btOk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 120, -1));
+
+        btBack.setFont(new java.awt.Font("SimSun-ExtB", 1, 14)); // NOI18N
+        btBack.setForeground(new java.awt.Color(102, 102, 102));
+        btBack.setText("REGRESAR");
+        btBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 120, 20));
         getContentPane().add(lbBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 432, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNameActionPerformed
-        director.getBuilder().setTeamName(jtName.getText());
-    }//GEN-LAST:event_jtNameActionPerformed
-
     private void btAddPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAddPlayersActionPerformed
-        PlayerInscription inscription = new PlayerInscription(principal, true);
-        inscription.setVisible(true);
-        this.setVisible(false);
+        Test.inscription.setVisible(true);
+        Test.inscription.setLocationRelativeTo(null);
+   
     }//GEN-LAST:event_btAddPlayersActionPerformed
 
     private void btOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOkActionPerformed
-       director.createTeam();
+        director.getBuider().setTeamName(jtName.getText());
+        Team t = director.createTeam();
+        Test.teamList.addTeamList(t);
+        jtName.setText("");
+        dispose();
+        JOptionPane.showMessageDialog(null, Test.teamList.toString());
+        director = new Director();
     }//GEN-LAST:event_btOkActionPerformed
-        
+
+    private void btBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBackActionPerformed
+        dispose();
+    }//GEN-LAST:event_btBackActionPerformed
+
     private void setTransparentButton(JButton button) {
         button.setOpaque(false);
         button.setContentAreaFilled(false);
@@ -137,6 +153,7 @@ public class Login extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAddPlayers;
+    private javax.swing.JButton btBack;
     private javax.swing.JButton btOk;
     private javax.swing.JLabel jlImage;
     private javax.swing.JLabel jlInscription;

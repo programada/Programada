@@ -1,12 +1,13 @@
 package logicLayerBussiness;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author USER-PC
  */
-public class Player {
+public class Player implements Serializable{
     private String id;
 
     public Player(String id) {
@@ -21,6 +22,7 @@ public class Player {
         this.id = id;
     }
 
+    /****************no pueden haber jugadores con los mismos id dentro de un mismo equipo ******************/
     @Override
     public int hashCode() {
         int hash = 3;
@@ -41,6 +43,11 @@ public class Player {
         }
         final Player other = (Player) obj;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Jugador: " + "ID: " + id;
     }
     
     

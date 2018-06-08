@@ -47,8 +47,6 @@ public class Lock {
         } 
     
     }
-    
-    
 
     public void addClue(JLabel clue) {
         imagesClues.add(clue);

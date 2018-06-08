@@ -5,18 +5,16 @@
  */
 package presentationLayer;
 
-import builder.Director;
+import logicLayerBussiness.Player;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import logicLayerBussiness.Player;
+import logicLayerBussiness.Test;
 
 /**
  *
  * @author LAUREN VEGA
  */
 public class PlayerInscription extends javax.swing.JDialog {
-
-    private final Director director = Director.getInstance();
 
     /**
      * Creates new form PlayerInscription
@@ -30,7 +28,7 @@ public class PlayerInscription extends javax.swing.JDialog {
         ImageIcon icon2 = new ImageIcon("imagenes progra/EscapeRoom.png");
         jlImage.setIcon(icon2);
         lbBackground.setIcon(icon1);
-        this.setSize(400, 300);
+        this.setSize(400, 330);
         setLocationRelativeTo(null);
     }
 
@@ -51,6 +49,7 @@ public class PlayerInscription extends javax.swing.JDialog {
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlImage.setPreferredSize(new java.awt.Dimension(260, 90));
@@ -83,17 +82,20 @@ public class PlayerInscription extends javax.swing.JDialog {
         getContentPane().add(btAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 110, 30));
 
         lbBackground.setPreferredSize(new java.awt.Dimension(400, 300));
-        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAcceptActionPerformed
-        director.getBuilder().addPlayer(new Player(jtIdPlayer.getText()));
+        Test.login.getDirector().getBuider().addPlayer(new Player(jtIdPlayer.getText()));
+        jtIdPlayer.setText("");
+        dispose();
+
     }//GEN-LAST:event_btAcceptActionPerformed
 
     private void btExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExitActionPerformed
-        this.dispose();
+        dispose();
     }//GEN-LAST:event_btExitActionPerformed
 
     private void setTransparentButton(JButton button) {
