@@ -6,6 +6,7 @@
 package logicLayerBussiness;
 
 //import presentationLayer.FirstDesign;
+import dataLayer.ReadFirstClue;
 import presentationLayer.Principal;
 import java.io.IOException;
 import java.util.HashSet;
@@ -29,7 +30,10 @@ public class Test {
     public static Director director = new Director();
     public static TeamListFile teamListFile = new TeamListFile();
     public static HashSet teamList2 = new HashSet<Team>();
+    
+    public static ReadFirstClue read = new ReadFirstClue();
        
+
     public static void main(String[] args) {
         
         principal.setVisible(true);
@@ -54,6 +58,23 @@ public class Test {
 
                 //listEmployee.setOrder(new OrderByDate());
 
+        try {
+            read.open("wordList.txt");
+            read.read();
+            read.close();
+
+        } catch (IOException e) {
+            System.err.println("No se leyó el archivo de texto de palabras");
+        }
+        
+//        Principal frame = Principal.getInstance();
+//        frame.setVisible(true);
+//        frame.setLocationRelativeTo(null);
+//            
+////        frame.setVisible(true);
+////        frame.setLocationRelativeTo(null);
+////        Timer t = new Timer();
+////        t.start();
 //          FirstDesign f = new FirstDesign(frame, false);
 //          f.setVisible(true);
 //          f.setLocationRelativeTo(null);

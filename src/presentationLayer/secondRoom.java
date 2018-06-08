@@ -5,6 +5,8 @@
  */
 package presentationLayer;
 
+import logicLayerBussiness.Lock;
+
 /**
  *
  * @author AxMCa
@@ -64,7 +66,7 @@ public class secondRoom extends javax.swing.JDialog {
                     .addComponent(clueLock1_2)
                     .addComponent(clueLock1_1)
                     .addComponent(principalLock1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

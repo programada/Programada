@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package presentationLayer;
+package logicLayerBussiness;
 
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
@@ -32,6 +32,7 @@ public class Lock {
             return false; 
         }
     }
+    
     // desabilita las pistas del candado
     private void disableClues() {
         for (JLabel imagesClues : imagesClues) {
@@ -47,16 +48,11 @@ public class Lock {
         } 
     
     }
+    
+    
 
     public void addClue(JLabel clue) {
         imagesClues.add(clue);
     }
-    
-    
-    
-    
-    
-
-    
     
 }
