@@ -5,12 +5,23 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import logicLayerBussiness.Test;
 
 public class ReaderManager {
 
     private BufferedReader reader;
+    private static ArrayList<Question> questionList;
 
+    public ReaderManager() {
+        questionList= new ArrayList<>();
+    }
+
+    public static ArrayList<Question> getQuestionList() {
+        return questionList;
+    }
+    
+ 
     public void open(String fileName) throws FileNotFoundException {
         reader = new BufferedReader(new FileReader(fileName));
     }
@@ -35,7 +46,7 @@ public class ReaderManager {
         Question question = read();
         while (question != null) {
 
-            Test.questionList.add(question);
+            questionList.add(question);
             question = read();
             
         } 
