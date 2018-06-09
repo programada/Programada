@@ -34,7 +34,6 @@ public class Test {
     public static Director director = new Director();
     public static TeamListFile teamListFile = new TeamListFile();
     public static HashSet teamList2 = new HashSet<Team>();
-    public static ArrayList<Question> questionList = new ArrayList<>();
     public static Proof p = new Proof();
     
     public static ReadFirstClue read = new ReadFirstClue();
