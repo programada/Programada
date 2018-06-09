@@ -6,9 +6,11 @@
 package logicLayerBussiness;
 
 //import presentationLayer.FirstDesign;
+import dataLayer.Question;
 import dataLayer.ReadFirstClue;
 import presentationLayer.Principal;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
 import presentationLayer.Login;
@@ -30,7 +32,7 @@ public class Test {
     public static Director director = new Director();
     public static TeamListFile teamListFile = new TeamListFile();
     public static HashSet teamList2 = new HashSet<Team>();
-    
+    public static ArrayList<Question> questionList = new ArrayList<>();
     public static ReadFirstClue read = new ReadFirstClue();
        
 

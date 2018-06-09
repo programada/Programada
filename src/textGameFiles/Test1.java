@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class Test {
+public class Test1 {
 
     public static void main(String[] args) {
         //Pedir los datos de tres personas y almacenarlas en la lista

@@ -1,74 +1,40 @@
-
-GEOGRAFIA
-¿A qué país pertenece la isla de Tasmania?_AUSTRALIA
-¿Cuál es el código internacional para Cuba?_CU
-¿Con cuántos países limita Argentina?_CINCO
-¿Cuál es la capital de Suiza?_BERNA
-¿En qué país está Ushuaia, la ciudad más al sur del mundo?_ARGENTINA
-¿En qué país está la Laguna Verde?_BOLIVIA
-¿En qué cordillera están la mayoría de las grandes montañas?_HIMALAYA
-¿A qué país pertenece la isla Mujeres?_MEXICO
-¿Cuál es la religión mayoritaria en China?_BUDISMO
-¿A qué país pertenece la Isla de Pascua?_CHILE
-30...
-HISTORIA
-¿En qué año tuvo lugar el ataque a Pearl Harbor?_1941
-El Renacimiento marcó el inicio de la Edad..._MODERNA
-¿Qué se celebra el 8 de Marzo?_DIA DE LA MUJER
-¿Cuántos siglos duró el Siglo de Oro?_DOS
-¿Dónde surgió la filosofía?_GRECIA
-¿En qué país nació el protestantismo?_ALEMANIA
-¿Qué imperio llegó a conquistar casí toda Europa?_ROMANO
-¿Cuántos colores tiene la bandera española?_DOS
-¿Maria Antonieta fue reina de qué país?_FRANCIA
-¿En qué año viajó el primer hombre a la luna?_1969
-58
-DEPORTE
-¿Cuál es el estilo de natación más rápido?_CROL
-¿En qué país se inventó el voleibol?
-¿Cuántos puntos vale un tiro libre encestado en baloncesto?_UNO
-¿en cual pais se encuentra el estadio de fútbol con mayor capacidad en América?_MEXICO
-¿Cuál es el país de origen del futbolista Lionel Messi?_ARGENTINA
-¿Quién ganó el mundial de fútbol del año 2002?_BRAZIL
-¿Dónde se inventó el tenis de mesa?_INGLATERRA
-¿Dónde apoyan los jinetes sus pies?_ESTRIBOS
-¿Cuántas cartas tiene una baraja inglesa?_52
-¿Cuántos títulos mundiales posee el motociclista Valentino Rossi?_NUEVE
-80
-CIENCIA Y TECNOLOGIA
-¿Qué órgano del cuerpo humano produce la bilis?_HIGADO
-¿Cuál es el hueso más pequeño del cuerpo?_EL ESTRIBO
-¿Qué estudia la icitología?_PECES
-¿Cuál es el mamífero más grande conocido hasta la actualidad?_BALLENA
-¿Qué es un equino?_CABALLO
-¿Cuántas cavidades estomacales tiene una vaca?_CUATRO
-¿Por qué los cocodrilos mantienen la boca abierta durante largo rato?_CALENTARSE
-¿Donde están los meniscos?_RODILLAS
-¿Qué es lo que transforma la leche en yogur?_BACTERIA
-¿En qué lugar del cuerpo se produce la insulina?_PANCREAS
-36
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
+¿A qué país pertenece la isla de Tasmania?_AUSTRALIA_geografia
+¿Cuál es el código internacional para Cuba?_CU_geografia
+¿Con cuántos países limita Argentina?_CINCO_geografia
+¿Cuál es la capital de Suiza?_BERNA_geografia
+¿En qué país está Ushuaia, la ciudad más al sur del mundo?_ARGENTINA_geografia
+¿En qué país está la Laguna Verde?_BOLIVIA_geografia
+¿En qué cordillera están la mayoría de las grandes montañas?_HIMALAYA_geografia
+¿A qué país pertenece la isla Mujeres?_MEXICO_geografia
+¿Cuál es la religión mayoritaria en China?_BUDISMO_geografia
+¿A qué país pertenece la Isla de Pascua?_CHILE_geografia
+¿En qué año tuvo lugar el ataque a Pearl Harbor?_1941_historia
+El Renacimiento marcó el inicio de la Edad..._MODERNA_historia
+¿Qué se celebra el 8 de Marzo?_DIA DE LA MUJER_historia
+¿Cuántos siglos duró el Siglo de Oro?_DOS_historia
+¿Dónde surgió la filosofía?_GRECIA_historia
+¿En qué país nació el protestantismo?_ALEMANIA_historia
+¿Qué imperio llegó a conquistar casí toda Europa?_ROMANO_historia
+¿Cuántos colores tiene la bandera española?_DOS_historia
+¿Maria Antonieta fue reina de qué país?_FRANCIA_historia
+¿En qué año viajó el primer hombre a la luna?_1969_historia
+¿Cuál es el estilo de natación más rápido?_CROL_deporte
+¿En qué país se inventó el voleibol?_deporte
+¿Cuántos puntos vale un tiro libre encestado en baloncesto?_UNO_deporte
+¿en cual pais se encuentra el estadio de fútbol con mayor capacidad en América?_MEXICO_deporte
+¿Cuál es el país de origen del futbolista Lionel Messi?_ARGENTINA_deporte
+¿Quién ganó el mundial de fútbol del año 2002?_BRAZIL_deporte
+¿Dónde se inventó el tenis de mesa?_INGLATERRA_deporte
+¿Dónde apoyan los jinetes sus pies?_ESTRIBOS_deporte
+¿Cuántas cartas tiene una baraja inglesa?_52_deporte
+¿Cuántos títulos mundiales posee el motociclista Valentino Rossi?_NUEVE_deporte
+¿Qué órgano del cuerpo humano produce la bilis?_HIGADO_ciencia
+¿Cuál es el hueso más pequeño del cuerpo?_EL ESTRIBO_ciencia
+¿Qué estudia la icitología?_PECES_ciencia
+¿Cuál es el mamífero más grande conocido hasta la actualidad?_BALLENA_ciencia
+¿Qué es un equino?_CABALLO_ciencia
+¿Cuántas cavidades estomacales tiene una vaca?_CUATRO_ciencia
+¿Por qué los cocodrilos mantienen la boca abierta durante largo rato?_CALENTARSE_ciencia
+¿Donde están los meniscos?_RODILLAS_ciencia
+¿Qué es lo que transforma la leche en yogur?_BACTERIA_ciencia
+¿En qué lugar del cuerpo se produce la insulina?_PANCREAS_ciencia	
